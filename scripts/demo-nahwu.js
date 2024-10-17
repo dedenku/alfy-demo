@@ -47,7 +47,7 @@ function loadQuestion() {
     const question = questions[currentQuestionIndex];
 
     let questionHTML = `
-        <div class="question">
+        <div class="question slide-in-right">
             <h3>${question.question}</h3>
             <div class="options">
                 ${question.options.map((option, index) => `
@@ -73,6 +73,11 @@ function updateProgressBar() {
 }
 
 function checkAnswer(selectedIndex) {
+    
+    const myTimeout = setTimeout(myGreeting, 1000); //animasi slide-out
+    function myGreeting() {
+        document.querySelector(".question").classList.add("slide-out-left")
+    }
     const question = questions[currentQuestionIndex];
     const buttons = document.querySelectorAll('.options button');
 
@@ -121,6 +126,12 @@ function nextQuestion() {
     } else {
         setTimeout(() => showFullProgressAndEnd(false), 1000);
     }
+    const myTimeout = setTimeout(myGreeting, 500);
+
+    function myGreeting() {
+        document.querySelector(".question").classList.remove("slide-out-left")
+    }
+
 }
 
 function showFullProgressAndEnd(failed) {

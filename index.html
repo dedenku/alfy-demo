@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alfy - Belajar Tata Bahasa Arab dengan Mudah</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/animista.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Alfy</div>
+                <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#ffffff"
+                        class="bi bi-book-half" viewBox="0 0 16 16">
+                        <path
+                            d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+                    </svg>
+                    <p>Alfy</p>
+                </div>
                 <div class="nav-links">
                     <a href="#features">Fitur</a>
                     <a href="#about">Tentang</a>
@@ -22,31 +37,37 @@
 
     <main>
         <section class="hero">
-            <div class="container">
-                <h1>Belajar Tata Bahasa Arab dengan Mudah dan Menyenangkan</h1>
-                <p>Kuasai Nahwu, Sharaf, dan Balaghah melalui Pembelajaran Interaktif</p>
-                <a href="./pages/demo-nahwu.html"><button class="cta-button" id="startLearning">Coba Demo</button></a>
+            <div class="container container-hero">
+                <img class="pulsate-fwd" id="hero-image" src="./images/hero.png" alt="illustration"
+                    data-aos="fade-down">
+                <div class="hero-content">
+                    <h1 data-aos="fade-down">Belajar Tata Bahasa Arab dengan Mudah dan Menyenangkan</h1>
+                    <p data-aos="fade-down">Kuasai Nahwu, Sharaf, dan Balaghah melalui Pembelajaran Interaktif</p>
+                    <a href="./pages/demo-nahwu.html">
+                        <button class="cta-button" id="startLearning" data-aos="fade-down">Coba Demo</button>
+                    </a>
+                </div>
             </div>
         </section>
 
         <section class="features" id="features">
             <div class="container">
-                <h2>Fitur Utama</h2>
+                <h2 class="scale-up-center" id="txt-fitur-utama" data-aos="zoom-in-up">Fitur Utama</h2>
                 <div class="feature-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">📚</div>
-                        <h3>Pembelajaran Bertahap</h3>
-                        <p>Materi disusun secara sistematis dan bertahap</p>
+                    <div class="feature-item scale-up-bottom">
+                        <div class="feature-icon" data-aos="fade-down">📚</div>
+                        <h3 data-aos="flip-right">Pembelajaran Bertahap</h3>
+                        <p data-aos="fade-up">Materi disusun secara sistematis dan bertahap</p>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🏆</div>
-                        <h3>Sistem Reward</h3>
-                        <p>Dapatkan penghargaan atas pencapaian belajarmu</p>
+                    <div class="feature-item scale-up-bottom">
+                        <div class="feature-icon" data-aos="fade-down">🏆</div>
+                        <h3 data-aos="flip-right">Sistem Reward</h3>
+                        <p data-aos="fade-up">Dapatkan penghargaan atas pencapaian belajarmu</p>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">📊</div>
-                        <h3>Tracking Kemajuan</h3>
-                        <p>Pantau perkembangan belajarmu secara real-time</p>
+                    <div class="feature-item scale-up-bottom">
+                        <div class="feature-icon" data-aos="fade-down">📊</div>
+                        <h3 data-aos="flip-right">Tracking Kemajuan</h3>
+                        <p data-aos="fade-up">Pantau perkembangan belajarmu secara real-time</p>
                     </div>
                 </div>
             </div>
@@ -60,9 +81,14 @@
     </footer>
 
     <script>
-        document.getElementById('startLearning').addEventListener('click', function() {
+        document.getElementById('startLearning').addEventListener('click', function () {
             alert('Selamat Mencoba Demo Pembelajaran dari Alfy!');
         });
     </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
