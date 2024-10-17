@@ -151,7 +151,7 @@ function endQuiz(failed) {
     document.getElementById('quiz-container').innerHTML = `
         <h2>${message}</h2>
         <p>Skor Anda: ${score} dari ${questions.length}</p>
-                        <a href="../index.html"><button class="cta-button" id="startLearning">Kembali ke Beranda</button></a>
+                        <a href="../index"><button class="cta-button" id="startLearning">Kembali ke Beranda</button></a>
     `;
     document.getElementById('result').textContent = '';
     document.getElementById('progress-container').style.display = 'none';
