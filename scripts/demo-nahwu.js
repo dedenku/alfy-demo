@@ -73,7 +73,7 @@ function updateProgressBar() {
 }
 
 function checkAnswer(selectedIndex) {
-    
+
     const myTimeout = setTimeout(myGreeting, 1000); //animasi slide-out
     function myGreeting() {
         document.querySelector(".question").classList.add("slide-out-left")
@@ -149,9 +149,12 @@ function endQuiz(failed) {
     let sound = failed ? 'fail-sound' : 'complete-sound';
 
     document.getElementById('quiz-container').innerHTML = `
-        <h2>${message}</h2>
-        <p>Skor Anda: ${score} dari ${questions.length}</p>
-                        <a href="../index.html"><button class="cta-button" id="startLearning">Kembali ke Beranda</button></a>
+        <div class="end-container">
+            <h2 id="end-message">${message}</h2>
+            <p id="end-text">Skor Anda: ${score} dari ${questions.length}</p>
+            <img id="end-message-img" src="../images/end-message.png" alt="end-image">
+            <a href="../index"><button class="cta-button" id="startLearning">Kembali ke Beranda</button></a>
+        </div>
     `;
     document.getElementById('result').textContent = '';
     document.getElementById('progress-container').style.display = 'none';

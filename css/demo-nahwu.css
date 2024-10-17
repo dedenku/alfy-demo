@@ -1,111 +1,124 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-x: hidden;
 }
 h1 {
-    color: #4CAF50;
-    text-align: center;
+  color: #4caf50;
+  text-align: center;
 }
 .question {
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 .options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 button {
-    padding: 10px;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
+  padding: 10px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
 }
 button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 #result {
-    font-weight: bold;
-    margin-top: 10px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 .correct {
-    background-color: #4CAF50;
-    color: white;
+  background-color: #4caf50;
+  color: white;
 }
 .incorrect {
-    background-color: #f44336;
-    color: white;
+  background-color: #f44336;
+  color: white;
 }
 .incorrect:hover {
-    background-color: #f44336;
-    color: white;
+  background-color: #f44336;
+  color: white;
 }
 #lives {
-    font-size: 24px;
-    margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 #progress-container {
-    width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    margin-bottom: 20px;
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 #progress-bar {
-    width: 0;
-    height: 20px;
-    background-color: #4CAF50;
-    border-radius: 5px;
-    transition: width 0.5s ease-in-out;
+  width: 0;
+  height: 20px;
+  background-color: #4caf50;
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
 }
 #exit-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    /* background-color: #f44336; */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  /* background-color: #f44336; */
 }
 
 .bi-x-circle {
-    color: #f44336;
+  color: #f44336;
 }
 .bi-x-circle:hover {
-    color: #d32f2f;
+  color: #d32f2f;
 }
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 5px;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
 }
 .modal-buttons {
-    text-align: right;
-    margin-top: 20px;
+  text-align: right;
+  margin-top: 20px;
 }
 .modal-buttons button {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
+.end-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#end-message-img {
+  max-width: 30%;
+}
 
-  
+@media screen and (max-width: 768px) {
+    #end-message-img {
+        max-width: 60%;
+      }
+}
