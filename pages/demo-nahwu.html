@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfy - Demo Pembelajaran Nahwu</title>
+    <link rel="stylesheet" href="../css/demo-nahwu.css">
+    <script src="../scripts/demo-nahwu.js" defer></script>
+</head>
+<body>
+    <h1>Alfy - Demo Pembelajaran Nahwu</h1>
+    <div id="lives">❤️❤️❤️</div>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+    <div id="quiz-container"></div>
+    <div id="result"></div>
+    <button id="exit-button">Keluar</button>
+
+    <div id="exit-modal" class="modal">
+        <div class="modal-content">
+            <h2>Konfirmasi Keluar</h2>
+            <p>Apakah Anda yakin ingin keluar dari pembelajaran?</p>
+            <div class="modal-buttons">
+                <button id="cancel-exit">Batal</button>
+                <button id="confirm-exit">Keluar</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="correct-sound" src="../audio/correct.mp3"></audio>
+    <audio id="incorrect-sound" src="../audio/incorrect.mp3"></audio>
+    <audio id="complete-sound" src="../audio/level-complete.mp3"></audio>
+    <audio id="fail-sound" src="../audio/fail-sound.mp3"></audio>
+
+</body>
+</html>
